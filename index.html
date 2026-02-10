@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Status | Myndigheten för totalförsvarsanalys</title>
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #000000;
+      --border: #e2e6ea;
+      --panel: #f7f9fb;
+      --radius: 14px;
+      --green: #1f8f4e;
+      --yellow: #e0a800;
+      --red: #c62828;
+      --link: #005ea5;
+    }
+
+    *{ box-sizing: border-box; }
+
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+    .wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 56px 20px 60px;
+      text-align: center;
+    }
+
+    header{
+      margin-bottom: 30px;
+    }
+
+    .logo{
+      height: 100px;
+      width: auto;
+      display: block;
+      margin: 0 auto 26px;
+    }
+
+    .intro{
+      font-size: 18px;
+      max-width: 70ch;
+      margin: 0 auto 44px;
+    }
+
+    .card{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px 30px;
+      text-align: left;
+      margin-bottom: 28px;
+    }
+
+    .status-row{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .dot{
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      flex: 0 0 auto;
+    }
+
+    .green{ background: var(--green); }
+    .yellow{ background: var(--yellow); }
+    .red{ background: var(--red); }
+
+    h1{
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    p{
+      margin: 12px 0 0;
+      font-size: 18px;
+    }
+
+    a{
+      color: var(--link);
+      text-decoration: underline;
+    }
+
+    /* MOBILANPASSNING */
+    @media (max-width: 600px){
+      .wrap{
+        padding: 36px 16px 48px;
+      }
+
+      .logo{
+        height: 70px;
+        margin-bottom: 18px;
+      }
+
+      h1{
+        font-size: 24px;
+      }
+
+      .card{
+        padding: 28px 20px;
+      }
+    }
+
+    .sr-only{
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <img class="logo" src="logo.svg" alt="Myndigheten för totalförsvarsanalys" />
+    </header>
+
+    <div class="intro">
+      Detta är Myndigheten för totalförsvarsanalys statuswebb. Om vår ordinarie webbplats mtfa.se inte fungerar, informerar vi här löpande om vad som händer och vad du behöver veta.
+    </div>
+
+    <main>
+
+      <section class="card" aria-labelledby="status-green">
+        <div class="status-row" role="status">
+          <span class="dot green" aria-hidden="true"></span>
+          <h1 id="status-green">Alla system fungerar normal</h1>
+        </div>
+        <p>Det finns just nu inga kända störningar i våra digitala tjänster.</p>
+      </section>
+
+      <section class="card" aria-labelledby="status-yellow">
+        <div class="status-row">
+          <span class="dot yellow" aria-hidden="true"></span>
+          <h1 id="status-yellow">Driftstörning i våra digitala tjänster</h1>
+        </div>
+        <p>Vi upplever för närvarande problem som påverkar delar av våra digitala tjänster. Felsökning pågår och vi arbetar för att lösa problemet så snabbt som möjligt.</p>
+        <p>För att komma i kontakt med oss, skicka e-post till <a href="mailto:registrator@mtfa.se">registrator@mtfa.se</a></p>
+      </section>
+
+      <section class="card" aria-labelledby="status-red">
+        <div class="status-row">
+          <span class="dot red" aria-hidden="true"></span>
+          <h1 id="status-red">Driftstörning i våra digitala tjänster</h1>
+        </div>
+        <p>Vi upplever för närvarande problem som påverkar delar av våra digitala tjänster. Det kan innebära att vår webbplats inte går att nå eller att funktioner inte fungerar som förväntat. Felsökning pågår och vi arbetar för att lösa problemet så snabbt som möjligt.</p>
+        <p>För att komma i kontakt med oss, skicka e-post till <a href="mailto:registrator@mtfa.se">registrator@mtfa.se</a></p>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
